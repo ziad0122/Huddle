@@ -1,0 +1,442 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#fe52c0;
+    --secondry-color:#092a31;
+}
+/*start header*/
+header{
+    background-image: url(../images/bg-hero-desktop.svg);
+    width: 100%;
+    height: 600px;
+    background-blend-mode: multiply;
+    background-color: #edfbfe;
+
+    position: relative;
+}
+header .container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 25px 40px;
+}
+header .container nav .button{
+    position: absolute;
+    width: 175px;
+    height: 40px;
+    right: 90px;
+    top: 25px
+}
+header .container nav button{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border-color: transparent;
+    background-color: #ffffff;
+    color: #001410;
+    cursor: pointer;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px 1px #b1b1b1;
+    font-weight: unset;
+}
+h1,
+p{
+    color: var(--secondry-color);
+}
+p{
+    color: #a3a4a6;
+    font-size: 13px;
+}
+
+.landing{
+    position: absolute;
+    display: flex;
+    width: calc(100% - 80px);
+    height: calc(500px - 50px);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing .landleft{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    padding: 65px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.landing .landleft .h1{
+    line-height: 45px;
+
+}
+.landing .landleft .pragh{
+    line-height: 25px;
+    font-size: 17px;
+
+}
+.landing .landleft .button{
+
+    width: 200px;
+    height: 50px;
+}
+.landing .landleft button{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border-color: transparent;
+    background-color: #ffffff;
+    color: #001410;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 5px 5px 8px 1px #b1b1b1;
+}
+.landing .landright{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    padding: 40px 0 0 0;
+}
+.landing .landright .img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.landing .landright img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+header .container button:hover{
+    background-color: var(--main-color);
+    color: #ffffff;
+    box-shadow: 5px 5px 8px 1px var(--main-color);
+}
+@media(max-width:1000px){
+header{
+    height: 800px;
+}
+header .container{
+    padding: 25px 0;
+}
+header nav{
+    position: relative;
+    width: 95%;
+    height: 5%;
+}
+header nav .logo img{
+    width:150px
+}
+header .container nav .button{
+    right: 0;
+    width: 130px;
+    height: 35px;
+    top: 0;
+}
+header .landing{
+    flex-direction: column;
+    height: 750px;
+    width: 100%;
+    padding: 0 8px;
+}
+header .landing .landleft{
+    width: 100%;
+    padding: 70px 0 0 0;
+    height: 70%;
+    position: unset;
+    align-items: center;
+    gap: 40px;
+}
+h1{
+    font-size: 29px;
+}
+p{
+    font-weight: unset;
+    font-size: 17px;
+    text-align: center
+}
+br{
+    visibility: hidden;
+    display:none;
+}
+header .landing .landright{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+}
+
+}
+/*end headr*/
+/*start content*/
+.content{
+    position: relative;
+    width: 100%;
+    padding: 150px 0 0 0;
+    height: 1300px;
+}
+.content .container{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    width: 100%;
+    padding: 0px 5%;
+    row-gap: 100px;
+    column-gap: 70px;
+    height: 100%;
+}
+.content .container .text-mobil,.text2-mobil{
+    display: none;
+}
+.content img{
+    width: 75%;
+}
+.content .container .text1,.text2,.text3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    height: 75%;
+    gap: 15px;
+}
+h1{
+    text-align: center;
+}
+/*
+.content .container:first-child,:nth-child(5){
+    padding-left: 100px;
+}*/
+@media(max-width: 950px){
+    .content{
+        height: calc(270px * 6);
+        padding: 100px 0 0 0;
+    }
+    .content .container{
+        row-gap: unset;
+        height: calc(100% - 150px);
+        grid-template-columns: unset;
+        grid-template-rows: repeat(6,245px);
+    }
+    .content .container .text1,.text3{
+        display: none;
+    }
+    .content .container .img{
+        text-align: center;
+    }
+    .content img{
+        height: 100%;
+    }
+    .content .container .text2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 15px;
+    }
+    .content .container .text-mobil,.text2-mobil{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 15px;
+        text-align: center;
+    }
+}
+/*end content*/
+/*start square*/
+.start{
+    position: relative;
+    width: 100%;
+    TEXT-ALIGN: center;
+    height: 200px;
+    background: #ffff;
+    padding: 0 20px;
+    top: 40px;
+}
+.start .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0 0 0;
+}
+.start .container .form{
+    display: flex;
+    background-color: #ffffff;
+    z-index: 1;
+    border: #eee solid 2px;
+    width: 500px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    box-shadow: 10px 5px 35px #666;
+    
+}
+.start .container .form button{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border-color: transparent;
+    background: #eee;
+    color: #001410;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.start .container .form button:hover{
+    background-color: var(--main-color);
+    box-shadow: 5px 5px 8px 1px var(--main-color);
+    color: #ffffff;
+    cursor: pointer;
+}
+.start .container .form h1{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+@media(max-width:550px){
+    .start .container .form{
+        width:100%;
+    }
+    .start .container .form h1{
+        font-size: 19px;
+    } 
+}
+/*start footer*/
+footer{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    padding: 40px 20px 0;
+    background-color: var(--secondry-color);
+    color: #fff;
+}
+footer .container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr)
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+footer .logo{
+    display: flex;
+}
+footer .logo h1{
+    left: 70px;
+    color: #ffff;
+    position: absolute;
+}
+.section2,
+.section3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+.section4{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer .adress{
+    display: flex;
+    gap: 10px;
+}
+footer .contect,.mail{
+    display: flex;
+    gap: 20px;
+}
+footer a{
+    position: relative;
+    text-decoration: none;
+    color: #ffff;
+}
+footer .section2 a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    background-color: #fff;
+}
+footer .section3 a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background-color: #fff;
+}
+footer .container .section2 a:hover::before{
+    width: 100%;
+}
+footer .container .section3 a:hover::before{
+    width: 100%;
+}
+.section4 i{
+    font-size: 25px;
+}
+.section4 i:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+footer .copy{
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    align-items: center;
+}
+footer .copy i{
+    font-size: 12px;
+}
+@media(max-width:850px){
+    footer{
+        height: 700px;
+    }
+    footer .container{
+        grid-template-rows: repeat(4,auto);
+        grid-template-columns: unset;
+        align-content: space-evenly;
+    }
+    footer .section1 .adress p{
+        width: 225px;
+    }
+    .section2,
+    .section3{
+        align-items: flex-start;
+    }
+    footer .copy{
+        bottom: 0;
+    }
+}
+/*end footer*/
